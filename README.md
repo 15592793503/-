@@ -104,3 +104,6 @@ src/main/java/
     └── Study1UserControllerApplication.java # Spring Boot启动类
 ```
 
+## 测试案例
+
+![image-20250323203411455](C:\Users\张浩益\AppData\Roaming\Typora\typora-user-images\image-20250323203411455.png)

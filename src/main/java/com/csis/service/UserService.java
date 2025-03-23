@@ -8,6 +8,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+
 @Service
 public class UserService {
     private final UserRepository userRepository;
@@ -37,6 +39,7 @@ public class UserService {
         }
         // 加密密码并保存
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setCreateTime(LocalDateTime.now());
         return userRepository.save(user);
     }
 
